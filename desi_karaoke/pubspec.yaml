@@ -15,7 +15,7 @@ version: 6.5.0+113
 publish_to: none
 
 environment:
-  sdk: ">=2.2.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -40,7 +40,7 @@ dependencies:
   cupertino_icons:
   shared_preferences:
   flutter_device_type: ^0.4.0
-  screen: ^0.0.5
+  flutter_screen_wake: ^1.0.2
   upgrader: ^3.2.0
   badges: ^1.1.1
   intl: ^0.17.0

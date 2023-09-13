@@ -17,7 +17,7 @@ import 'package:flutter/services.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_audio_engine/flutter_audio_engine.dart';
 import 'package:flutter_device_type/flutter_device_type.dart';
-import 'package:screen/screen.dart';
+import 'package:flutter_screen_wake/flutter_screen_wake.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:utf/utf.dart';
 
@@ -112,7 +112,7 @@ class _KaraokePageState extends State<KaraokePage>
   @override
   void initState() {
     super.initState();
-    Screen.keepOn(true);
+    FlutterScreenWake.keepOn(true);
     WidgetsBinding.instance.addObserver(this);
     Reference storageReference =
         FirebaseStorage.instance.ref().child(widget.music.storagepath);
@@ -528,7 +528,7 @@ class _KaraokePageState extends State<KaraokePage>
     playerPositionSubscription.cancel();
     subBluetooth?.cancel();
     WidgetsBinding.instance.removeObserver(this);
-    Screen.keepOn(false);
+    FlutterScreenWake.keepOn(false);
     super.dispose();
   }
 
